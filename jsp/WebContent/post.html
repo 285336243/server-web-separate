@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+	<script>
+		$.ajax({
+			url : "http://localhost:8080/jsp/post.do",
+			type : "post",
+			dataType : "json",
+			data : {
+				id : 1,
+				name : "tom"
+			},
+			success : function(data) {
+				alert(data.name);
+			}
+		});
+	</script>
+</body>
+</html>

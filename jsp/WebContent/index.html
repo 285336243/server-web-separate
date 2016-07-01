@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+    $(function () {
+        $.getJSON('http://localhost:8080/jsp/get.do', function (data) {
+            var arr = data;
+                var tr = $('<tr><td>' + arr.id + '</td><td>' + arr.name + '</td></tr>');
+                $("tbody").append(tr);
+        });
+    });
+    </script>
+</head>
+<body>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>姓名</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
